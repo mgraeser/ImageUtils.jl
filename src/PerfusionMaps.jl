@@ -163,7 +163,7 @@ Calculates the time in number of repetition times (Multiply with T_R of method t
 """
 function TTP(tseries::ImageMeta; alpha=0.4,alpha2=0.4,windowsize=12,DFPeriodInS=0.02154)
   dataFG = maximum(tseries, dims=4)
-  dataFG.data = TTP(tseries.data,alpha=alpha,alpha2=alpha2,windowsize=windowsize)
+  dataFG.data = TTP(tseries.data,alpha=alpha,alpha2=alpha2,windowsize=windowsize,DFPeriodInS=DFPeriodInS)
   return dataFG
 end
 
